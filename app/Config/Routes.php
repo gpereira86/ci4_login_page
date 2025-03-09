@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index', ['as' => 'home']);
 $routes->get('/login', 'Login::index', ['as' => 'login']);
 $routes->post('/login', 'Login::store', ['as' => 'login.store']);
+$routes->get('/login/destroy', 'Login::destroy', ['as' => 'login.destroy']);

@@ -40,9 +40,20 @@ class Login extends BaseController
             return redirect('login')->with('error', 'E-mail or password not found or incorrect');
         }
 
-        echo "<pre>";
-        var_dump($userFound);
-        echo "</pre>";
-        die();
+        if (!password_verify($this->request->getPost('password'), $userFound->password)) {
+            return redirect('login')->with('error', 'E-mail or password not found or incorrect');
+        }
+
+        unset($userFound->password);
+        session()->set('user', $userFound);
+
+        return redirect('home');
+
+    }
+
+    public function destroy()
+    {
+        session()->destroy();
+        return redirect('home');
     }
 }
