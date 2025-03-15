@@ -33,7 +33,7 @@
                                 <div class="row mb-3">
                                     <label for="email" class="col-lg-3 col-form-label">Usuário</label>
                                     <div class="col-lg">
-                                        <input type="text" name="email" placeholder="Ex.:usuarioteste" class="form-control" value="leonie.jacobs@simonis.com">
+                                        <input type="text" name="email" placeholder="exemplo@email.com" class="form-control" value="leonie.jacobs@simonis.com">
                                         <span class="text-danger"><?php echo session()->getFlashdata('errors')['email'] ?? ''; ?></span>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                 <div id="passwordContainer" class="row mb-3">
                                     <label for="password" class="col-lg-3 col-form-label">Senha:</label>
                                     <div class="col-lg">
-                                        <input type="password" id="password" name="password" placeholder="Ex.:senhateste" class="form-control">
+                                        <input type="password" id="password" name="password" placeholder="exemploSenha" class="form-control">
                                         <i class="bi bi-eye-slash"></i>
                                         <span class="text-danger"><?php echo session()->getFlashdata('errors')['password'] ?? ''; ?></span>
                                     </div>
